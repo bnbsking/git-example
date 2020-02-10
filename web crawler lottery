@@ -1,0 +1,15 @@
+import requests
+
+res = requests.get('http://www.taiwanlottery.com.tw/Lotto/Lotto649/history.aspx').text
+#"<span id="Lotto649Control_history_dlQuery_No2_0">15</span>"
+#"2" = res[i+l1]
+#"15" = res[i+l1+l2+1:i+l1+l2+3]
+pattern1 = "<span id=\"Lotto649Control_history_dlQuery_No"
+pattern2 = "_0\">"
+l1, l2 = len(pattern1), len(pattern2)
+
+ans = []
+for i in range(len(res)):
+    if res[i:i+l1]==pattern1 and res[i+l1+1:i+l1+1+l2]==pattern2:
+        ans.append(res[i+l1+l2+1:i+l1+l2+3])
+print(ans)
