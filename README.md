@@ -8,3 +8,6 @@ https://ithelp.ithome.com.tw/articles/10194954
 
 定時執行
 https://www.itread01.com/p/205511.html
+
+Selenium 指令集合
+http://yhhuang1966.blogspot.com/2018/05/python-selenium_27.html
